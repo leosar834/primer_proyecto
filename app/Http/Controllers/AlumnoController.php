@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class AlumnoController extends Controller
 {
     public function index(){
-        return "Bienvenido a la pagina de alumnos";
+        return view("alumno.index");
     }
     public function create(){
-        return "En esta pagina podras crear alumnos";
+        return view("alumno.create");
     }
     public function show($alumno){
-        return "Esta es la pagina del alumno {$alumno}";
+        return view("alumno.show",compact('alumno'));
     }
 }
